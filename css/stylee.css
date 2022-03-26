@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+.card {
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  width: 1080px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media (max-width: 376px) {
+  .card {
+    width: 335px;
+    margin: 20px auto;
+    flex-direction: column-reverse;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+  }
+}
+.card > div {
+  width: 50%;
+}
+@media (max-width: 376px) {
+  .card > div {
+    width: 100%;
+  }
+}
+.card .text {
+  color: white;
+  padding: 65px;
+}
+@media (max-width: 376px) {
+  .card .text {
+    text-align: center;
+    padding: 40px 19px;
+  }
+}
+.card .text h1 {
+  font-family: inter;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.card .text h1 span {
+  color: hsl(277, 64%, 61%);
+}
+.card .text p.main {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  padding: 0 20px 0 0;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+@media (max-width: 376px) {
+  .card .text p.main {
+    line-height: 1.6;
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+}
+.card .text .stat-component {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px 0 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+@media (max-width: 376px) {
+  .card .text .stat-component {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+@media (max-width: 376px) {
+  .card .text .stat-component .stat {
+    margin-bottom: 30px;
+  }
+}
+.card .text .stat-component .stat p {
+  color: hsla(0, 0%, 100%, 0.6);
+  margin-top: 10px;
+  font-size: 13px;
+}
+.card .image {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 10px 10px 0;
+}
+@media (max-width: 376px) {
+  .card .image {
+    border-radius: 10px 10px 0 0;
+  }
+}
+.card .image img {
+  height: 100%;
+}
+@media (max-width: 376px) {
+  .card .image img {
+    width: 335px;
+  }
+}
+.card .image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: hsl(282deg 100% 25% / 52%);
+}
+@media (max-width: 376px) {
+  .card .image::before {
+    height: calc(100% - 4px);
+  }
+}
